@@ -3,3 +3,12 @@ test:
 
 lint:
 	flake8 --ignore=E501
+
+publish:
+	twine upload dist/*
+
+release:
+	python setup.py sdist bdist_wheel
+
+clean:
+	rm dist/*
